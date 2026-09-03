@@ -1,0 +1,19 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jun 24 11:04:06 2026
+
+@author: preciouslawal
+"""
+
+def max_digit(input_number):
+    ''' find the maximum digit in a given positive integer '''
+    max_digit_so_far = 0
+    n = input_number
+    while n > 0:
+        digit = n % 10
+        if digit > max_digit_so_far:
+            max_digit_so_far = digit
+        n = n // 10  # do not put this inside an if statement 
+    return max_digit_so_far
+print(max_digit(36754))
